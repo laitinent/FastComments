@@ -4,15 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastComments"
+        xmlns:p="clr-namespace:FastComments.Properties"
         mc:Ignorable="d"
-        Title="Edit comment" Height="103.445" Width="457.36">
+        Title="{x:Static p:Resources.ecw_title}" Height="103.445" Width="457.36">
     <Grid>
-        <Label Content="Key" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="{x:Static p:Resources.ecw_key}" HorizontalAlignment="Left" Margin="29,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="keyTB" HorizontalAlignment="Left" Height="23" Margin="29,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Text" HorizontalAlignment="Left" Margin="229,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="{x:Static p:Resources.ecw_text}" HorizontalAlignment="Left" Margin="229,10,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="textTB" HorizontalAlignment="Left" Height="23" Margin="229,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="OK" HorizontalAlignment="Left" Margin="366,10,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="Button_Click"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="366,44,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="Button_Click_1"/>
+        <Button Content="{x:Static p:Resources.ecw_ok}" HorizontalAlignment="Left" Margin="366,10,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="Button_Click"/>
+        <Button Content="{x:Static p:Resources.ecw_cancel}" HorizontalAlignment="Left" Margin="366,44,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="Button_Click_1"/>
 
 
     </Grid>

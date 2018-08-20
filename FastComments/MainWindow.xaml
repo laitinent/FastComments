@@ -4,18 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastComments"
+        xmlns:p="clr-namespace:FastComments.Properties"
         mc:Ignorable="d"
         Title="FastComments" Height="466" Width="673" Closing="Window_Closing" Loaded="Window_Loaded">
     <Grid>
         <TextBox x:Name="fullTextBox" HorizontalAlignment="Left" Height="415" Margin="192,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="463"/>
 
-        <Label Content="Code" HorizontalAlignment="Left" VerticalAlignment="Top" Height="61"/>
+        <Label Content="{x:Static p:Resources.mw_code}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="50"/>
         <TextBox x:Name="codeTextBox" HorizontalAlignment="Left" Height="44" Margin="10,27,0,0" TextWrapping="Wrap" Text="ab" VerticalAlignment="Top" Width="75" FontSize="20" TextChanged="TextBox_TextChanged"/>
-        <Button Content="Undo" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_2"/>
-        <Button Content="Help..." HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="20" ToolTip="Show available codes"/>
-        <CheckBox x:Name="copyCheckbox" Content="Auto-Copy" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" IsChecked="True" ToolTip="Copy comment box to Clipboard"/>
-        <Button Content="Settings..." HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="75" ToolTip="Update code/comment database" Click="Button_Click_1"/>
-        <Button Content="Enter" HorizontalAlignment="Left" Margin="100,27,0,0" VerticalAlignment="Top" Width="75" Height="44" Click="Button_Click_3" IsDefault="True"/>
+        <Button Content="{x:Static p:Resources.mw_undo}" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_2"/>
+        <Button Content="{x:Static p:Resources.mw_help}" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="20" ToolTip="{x:Static p:Resources.mw_help_tt}"/>
+        <CheckBox x:Name="copyCheckbox" Content="{x:Static p:Resources.mw_autocopy}" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" IsChecked="True" ToolTip="{x:Static p:Resources.mw_autocopy_tt}"/>
+        <Button Content="{x:Static p:Resources.mw_settings}" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="75" ToolTip="{x:Static p:Resources.mw_settings_tt}" Click="Button_Click_1"/>
+        <Button Content="{x:Static p:Resources.mw_enter}"  HorizontalAlignment="Left" Margin="100,27,0,0" VerticalAlignment="Top" Width="75" Height="44" Click="Button_Click_3" IsDefault="True"/>
+        <TextBlock x:Name="tbVersion" HorizontalAlignment="Left" Margin="10,409,0,0" TextWrapping="Wrap" Text="v. 1.0" VerticalAlignment="Top" Width="89"/>    
 
 
     </Grid>

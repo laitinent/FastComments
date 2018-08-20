@@ -4,16 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FastComments"
+        xmlns:p="clr-namespace:FastComments.Properties"
         mc:Ignorable="d"
-        Title="Help" Height="354.038" Width="414.284">
+        Title="{x:Static p:Resources.hw_title}" Height="354.038" Width="414.284">
     <Grid>
         <ListView x:Name="listView1" SelectionChanged="listView1_SelectionChanged" >
+            <ListView.Resources>
+                <DataTemplate x:Key="Key">
+                    <TextBlock TextAlignment="Left" Text="{Binding Key}"/>
+                </DataTemplate>
+                <DataTemplate x:Key="Comment">
+                    <TextBlock TextAlignment="Left" Text="{Binding Fulltext}" />
+                </DataTemplate>
+                <DataTemplate x:Key="Insert">
+                    <Button Content="Insert" />
+                </DataTemplate>
+
+            </ListView.Resources>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Code" DisplayMemberBinding="{Binding Key}">
-
+                    <GridViewColumn Header="{x:Static p:Resources.hw_code}" CellTemplate ="{StaticResource Key}"> <!--DisplayMemberBinding="{Binding Key}"-->                        
                     </GridViewColumn>
-                    <GridViewColumn Header="Text" DisplayMemberBinding="{Binding Fulltext}"/>
+                    <GridViewColumn Header="{x:Static p:Resources.hw_text}" CellTemplate ="{StaticResource Comment}"></GridViewColumn>
+                    <GridViewColumn Header="Actions" CellTemplate ="{StaticResource Insert}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>

@@ -56,7 +56,14 @@ namespace FastComments
                     }
                     else
                     {
-                        comms[index] = item;
+                        if (!item.isContainedIn(comms))
+                        {
+                            comms[index] = item;
+                        }
+                        else
+                        {
+                            MessageBox.Show(Properties.Resources.mb_codeused);
+                        }
                     }
                     listView1.Items.Refresh();
                 }

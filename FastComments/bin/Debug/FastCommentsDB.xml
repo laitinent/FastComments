@@ -12,4 +12,12 @@
     <Key>fc</Key>
     <Fulltext>Älä pelleile</Fulltext>
   </Item>
+  <Item>
+    <Key>zz</Key>
+    <Fulltext>Last comment</Fulltext>
+  </Item>
+  <Item>
+    <Key>yy</Key>
+    <Fulltext>Why Why</Fulltext>
+  </Item>
 </ArrayOfItem>

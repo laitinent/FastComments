@@ -32,15 +32,11 @@ namespace FastComments
 
         public MainWindow()
         {
+            // to test localized version
+            //System.Threading.Thread.CurrentThread.CurrentUICulture =  new System.Globalization.CultureInfo("fi-FI");
             InitializeComponent();
-            /* to test it
-            Item ab = new Item("ab", "Korjaa abstraktia.");
-            if (!Comments.Contains(ab))
-            {
-                Comments.Add(ab);
-                Comments.Add(new Item("ti", "Korjaa tiivistelmää."));
-                Comments.Add(new Item("kn", "Kuvien numerointi kuntoon."));
-            }*/
+            tbVersion.Text = "v. "+System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -114,6 +110,11 @@ namespace FastComments
         // --------//
 
 
+            /// <summary>
+            /// Settings -button
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             AddCommentsWindow addWindow = new AddCommentsWindow(ref Comments);            
@@ -121,6 +122,11 @@ namespace FastComments
             filename = Properties.Settings.Default.DBFilename;
         }
 
+        /// <summary>
+        /// Undo button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             if (listFulltext.Count > 0)

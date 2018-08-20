@@ -18,4 +18,10 @@ C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\AddCommentsW
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\AddCommentsWindow.baml
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\EditListItemWindow.g.cs
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\EditListItemWindow.baml
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\fi-FI\FastComments.resources.dll
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\en\FastComments.resources.dll
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments.Properties.Resources.fi-FI.resources
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments.Properties.Resources.en.resources
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\fi-FI\FastComments.resources.dll
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\en\FastComments.resources.dll
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments.csprojAssemblyReference.cache
