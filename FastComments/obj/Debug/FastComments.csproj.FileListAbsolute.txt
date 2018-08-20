@@ -1,7 +1,6 @@
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\FastComments.exe.config
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\FastComments.exe
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\FastComments.pdb
-C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments.csprojAssemblyReference.cache
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\MainWindow.g.cs
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\App.g.cs
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments_MarkupCompile.cache
@@ -19,3 +18,4 @@ C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\AddCommentsW
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\AddCommentsWindow.baml
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\EditListItemWindow.g.cs
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\EditListItemWindow.baml
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments.csprojAssemblyReference.cache

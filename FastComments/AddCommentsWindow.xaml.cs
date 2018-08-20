@@ -37,11 +37,16 @@ namespace FastComments
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            items.Add(new Item(codeTextBox.Text, commentTextBox.Text));
-            codeTextBox.Text = "";
-            codeTextBox.Focus();
-            commentTextBox.Text = "";
-            Title = myTitle + " ("+items.Count+" comments)";
+            Item item = new Item(codeTextBox.Text, commentTextBox.Text);
+            if (!myContains(item)) // uses Compare
+            {
+                items.Add(item);
+                codeTextBox.Text = "";
+                codeTextBox.Focus();
+                commentTextBox.Text = "";
+                Title = myTitle + " (" + items.Count + " comments)";
+            }
+            else MessageBox.Show("Code already used. Use different code.");
         }
 
         /// <summary>
@@ -55,6 +60,11 @@ namespace FastComments
             Close();
         }
 
+        /// <summary>
+        /// Browse button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btFilename_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
@@ -65,6 +75,15 @@ namespace FastComments
                 Properties.Settings.Default.Save();
                 filenameTB.Text = Properties.Settings.Default.DBFilename;
             }
+        }
+
+        private bool myContains(Item item)
+        {
+            foreach(Item i in items)
+            {
+                if (i.CompareTo(item) == 0) return true;
+            }
+            return false;
         }
     }
 }

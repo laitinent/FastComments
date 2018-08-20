@@ -16,26 +16,10 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Serialization;
 
+
 namespace FastComments
 {
-    public class Item
-    {
-        public string Key { get; set; }
-        public string Fulltext { get => fulltext; set => fulltext = value; }
-
-        String fulltext;
-
-        public Item()
-        {
-
-        }
-
-        public Item(String k, String text)
-        {
-            Key = k;
-            Fulltext = text;
-        }
-    }
+    
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
