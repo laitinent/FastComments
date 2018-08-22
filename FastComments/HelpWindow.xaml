@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="{x:Static p:Resources.hw_title}" Height="354.038" Width="414.284">
     <Grid>
-        <ListView x:Name="listView1" SelectionChanged="listView1_SelectionChanged" >
+        <ListView x:Name="listView1" SelectionChanged="listView1_SelectionChanged"  ToolTip="{x:Static p:Resources.hw_tt}">
             <ListView.Resources>
                 <DataTemplate x:Key="Key">
                     <TextBlock TextAlignment="Left" Text="{Binding Key}"/>
@@ -17,7 +17,7 @@
                     <TextBlock TextAlignment="Left" Text="{Binding Fulltext}" />
                 </DataTemplate>
                 <DataTemplate x:Key="Insert">
-                    <Button Content="Insert" />
+                    <Button Content="Insert" Click="Button_Click"/>
                 </DataTemplate>
 
             </ListView.Resources>

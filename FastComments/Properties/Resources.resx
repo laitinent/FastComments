@@ -162,6 +162,9 @@
   <data name="hw_title" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="hw_tt" xml:space="preserve">
+    <value>Click to Edit, Insert to Add Entry above</value>
+  </data>
   <data name="mb_codeused" xml:space="preserve">
     <value>Code already used. Use different code.</value>
   </data>

@@ -196,6 +196,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Click to Edit, Insert to Add Entry above.
+        /// </summary>
+        public static string hw_tt {
+            get {
+                return ResourceManager.GetString("hw_tt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code already used. Use different code..
         /// </summary>
         public static string mb_codeused {

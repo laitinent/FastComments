@@ -162,6 +162,9 @@
   <data name="hw_title" xml:space="preserve">
     <value>Ohje</value>
   </data>
+  <data name="hw_tt" xml:space="preserve">
+    <value>Editoi valitsemalla rivi, lisää uusi rivi yläpuolelle painikkeella</value>
+  </data>
   <data name="mb_codeused" xml:space="preserve">
     <value>Koodi on jo käytössä. Valitse toinen koodi.</value>
   </data>
