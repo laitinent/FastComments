@@ -121,7 +121,7 @@
     <value>Lisää</value>
   </data>
   <data name="acw_browse" xml:space="preserve">
-    <value>Selaa</value>
+    <value>Selaa...</value>
   </data>
   <data name="acw_done" xml:space="preserve">
     <value>Valmis</value>
@@ -155,6 +155,12 @@
   </data>
   <data name="hw_code" xml:space="preserve">
     <value>Koodi</value>
+  </data>
+  <data name="hw_edit" xml:space="preserve">
+    <value>Muokkaa...</value>
+  </data>
+  <data name="hw_insert" xml:space="preserve">
+    <value>Lisää rivi</value>
   </data>
   <data name="hw_text" xml:space="preserve">
     <value>Kommentti</value>

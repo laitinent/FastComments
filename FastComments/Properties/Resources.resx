@@ -121,7 +121,7 @@
     <value>Add</value>
   </data>
   <data name="acw_browse" xml:space="preserve">
-    <value>Browse</value>
+    <value>Browse...</value>
   </data>
   <data name="acw_done" xml:space="preserve">
     <value>Done</value>
@@ -155,6 +155,12 @@
   </data>
   <data name="hw_code" xml:space="preserve">
     <value>Code</value>
+  </data>
+  <data name="hw_edit" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="hw_insert" xml:space="preserve">
+    <value>Insert</value>
   </data>
   <data name="hw_text" xml:space="preserve">
     <value>Text</value>

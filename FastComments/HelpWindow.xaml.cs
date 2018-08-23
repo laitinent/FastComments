@@ -39,13 +39,22 @@ namespace FastComments
         /// <param name="e"></param>
         private void listView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //TODO: hide unused buttons - no other actions
             //Title = myTitle + " "+(listView1.SelectedItem as Item).Key + ": " + (listView1.SelectedItem as Item).Fulltext;
+            //EditCurrentItem();
+
+        }
+
+        /// <summary>
+        /// Get list item and call editing method
+        /// </summary>
+        private void EditCurrentItem()
+        {
             int index = listView1.SelectedIndex;
             if (index >= 0)
             {
                 EditItemAt(index);
             }
-
         }
 
         /// <summary>
@@ -83,7 +92,11 @@ namespace FastComments
             else listView1.SelectedIndex = -1;
         }
 
-        // Insert button
+        /// <summary>
+        /// Insert button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
@@ -91,6 +104,14 @@ namespace FastComments
             comms.Insert(comms.IndexOf(i), new Item());
             EditItemAt(comms.IndexOf(i)-1, false);
             //MessageBox.Show("Index= " + comms.IndexOf(i));
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            Item i = (button.DataContext as Item);
+            
+            EditItemAt(comms.IndexOf(i));
         }
     }
 }

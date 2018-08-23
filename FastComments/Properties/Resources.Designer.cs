@@ -70,7 +70,7 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Browse.
+        ///   Looks up a localized string similar to Browse....
         /// </summary>
         public static string acw_browse {
             get {
@@ -174,6 +174,24 @@ namespace FastComments.Properties {
         public static string hw_code {
             get {
                 return ResourceManager.GetString("hw_code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit....
+        /// </summary>
+        public static string hw_edit {
+            get {
+                return ResourceManager.GetString("hw_edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Insert.
+        /// </summary>
+        public static string hw_insert {
+            get {
+                return ResourceManager.GetString("hw_insert", resourceCulture);
             }
         }
         

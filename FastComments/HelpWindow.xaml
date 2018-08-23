@@ -16,8 +16,11 @@
                 <DataTemplate x:Key="Comment">
                     <TextBlock TextAlignment="Left" Text="{Binding Fulltext}" />
                 </DataTemplate>
+                <DataTemplate x:Key="Edit">
+                    <Button x:Name="btnEdit" Content="{x:Static p:Resources.hw_edit}" Click="btnEdit_Click" />
+                </DataTemplate>
                 <DataTemplate x:Key="Insert">
-                    <Button Content="Insert" Click="Button_Click"/>
+                    <Button Content="{x:Static p:Resources.hw_insert}" Click="Button_Click"/>
                 </DataTemplate>
 
             </ListView.Resources>
@@ -26,7 +29,8 @@
                     <GridViewColumn Header="{x:Static p:Resources.hw_code}" CellTemplate ="{StaticResource Key}"> <!--DisplayMemberBinding="{Binding Key}"-->                        
                     </GridViewColumn>
                     <GridViewColumn Header="{x:Static p:Resources.hw_text}" CellTemplate ="{StaticResource Comment}"></GridViewColumn>
-                    <GridViewColumn Header="Actions" CellTemplate ="{StaticResource Insert}"></GridViewColumn>
+                    <GridViewColumn Header="Edit" CellTemplate ="{StaticResource Edit}"></GridViewColumn>
+                    <GridViewColumn Header="Insert" CellTemplate ="{StaticResource Insert}"></GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
