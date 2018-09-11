@@ -34,5 +34,17 @@ namespace FastComments.Properties {
                 this["DBFilename"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("FastCommentsDB.xml")]
+        public string DefaultDBFileName {
+            get {
+                return ((string)(this["DefaultDBFileName"]));
+            }
+            set {
+                this["DefaultDBFileName"] = value;
+            }
+        }
     }
 }

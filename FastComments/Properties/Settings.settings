@@ -5,5 +5,8 @@
     <Setting Name="DBFilename" Type="System.String" Scope="User">
       <Value Profile="(Default)">FastCommentsDB.xml</Value>
     </Setting>
+    <Setting Name="DefaultDBFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FastCommentsDB.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

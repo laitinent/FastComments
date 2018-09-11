@@ -132,6 +132,9 @@
   <data name="acw_newcommenttext" xml:space="preserve">
     <value>Uusi kommentti</value>
   </data>
+  <data name="acw_selectfolder" xml:space="preserve">
+    <value>Valitse kansio</value>
+  </data>
   <data name="acw_title" xml:space="preserve">
     <value>{0} ({1} kommenttia)</value>
   </data>

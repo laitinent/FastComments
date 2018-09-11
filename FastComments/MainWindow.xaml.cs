@@ -39,11 +39,16 @@ namespace FastComments
 
         }
 
+        /// <summary>
+        /// "Code/Key" Text changed - not used, used Enter button instead
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
+        {            
 
         }
+
         /// <summary>
         /// update full text from list (for Undo)
         /// </summary>
@@ -56,6 +61,11 @@ namespace FastComments
             }
         }
 
+        /// <summary>
+        /// Help button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             HelpWindow helpWindow = new HelpWindow(ref Comments);
@@ -143,6 +153,7 @@ namespace FastComments
         /// <param name="e"></param>
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+
             String fullText;
             // check if Code can be found
             foreach (var item in Comments)

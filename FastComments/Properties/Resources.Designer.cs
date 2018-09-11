@@ -106,6 +106,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Folder.
+        /// </summary>
+        public static string acw_selectfolder {
+            get {
+                return ResourceManager.GetString("acw_selectfolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} ({1} comments).
         /// </summary>
         public static string acw_title {

@@ -132,6 +132,9 @@
   <data name="acw_newcommenttext" xml:space="preserve">
     <value>New Comment Text</value>
   </data>
+  <data name="acw_selectfolder" xml:space="preserve">
+    <value>Select Folder</value>
+  </data>
   <data name="acw_title" xml:space="preserve">
     <value>{0} ({1} comments)</value>
   </data>

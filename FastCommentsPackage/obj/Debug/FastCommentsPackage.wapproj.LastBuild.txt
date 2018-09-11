@@ -1,0 +1,13 @@
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\Images\LockScreenLogo.scale-200.png
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\Images\Square150x150Logo.scale-200.png
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\Images\Square44x44Logo.scale-200.png
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\Images\Square44x44Logo.targetsize-24_altform-unplated.png
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\Images\StoreLogo.png
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\Images\Wide310x150Logo.scale-200.png
+C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd
+C:\Users\tlaitinen\source\repos\FastComments\FastCommentsPackage\bin\AnyCPU\Debug\resources.pri
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\fi-FI\FastComments.resources.dll
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\en\FastComments.resources.dll
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\FastComments.exe
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\FastComments.exe.config
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Debug\FastComments.pdb

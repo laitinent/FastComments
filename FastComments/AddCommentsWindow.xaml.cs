@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.IO;
 
 namespace FastComments
 {
@@ -23,11 +13,16 @@ namespace FastComments
         ObservableCollection<Item> items;
         String myTitle;
         const int filenameMaxLen = 54;
+        /// <summary>
+        /// Ctor
+        /// </summary>
+        /// <param name="lista">Core data</param>
         public AddCommentsWindow(ref ObservableCollection<Item> lista)
         {
             InitializeComponent();
             items = lista;
             myTitle = Title;
+            // "database"
             filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen); 
             filenameTB.ToolTip = Properties.Settings.Default.DBFilename; 
         }
@@ -73,10 +68,20 @@ namespace FastComments
         private void btFilename_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
-            sfd.FileName = Properties.Settings.Default.DBFilename;
+            sfd.FileName = //Properties.Settings.Default.DBFilename;
+                sfd.Title = Properties.Resources.acw_selectfolder;
+            //sfd.Filter = "XML Database files |*.xml";
+            //sfd.DefaultExt = "xml";
+            sfd.CheckPathExists = true;
+            sfd.CheckFileExists = false;
+            sfd.ValidateNames = false;
+            sfd.Title = Properties.Resources.acw_selectfolder;
+
             if(sfd.ShowDialog()==true)
             {
-                Properties.Settings.Default.DBFilename= sfd.FileName;
+                // check file path                                              
+                Properties.Settings.Default.DBFilename = Path.GetDirectoryName(sfd.FileName)+"\\"+
+                    Properties.Settings.Default.DefaultDBFileName;
                 Properties.Settings.Default.Save();
                 filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen);
             }
@@ -98,13 +103,11 @@ namespace FastComments
         /// <param name="maxLength"></param>
         /// <returns></returns>
         private string shortenFilePath(string s, int maxLength)
-        {
-            
-            
+        {                        
             if (s.Length > maxLength)
             {
                 int shortenedLength = maxLength / 2 - (s.Length - maxLength)/2;
-                int len = Math.Max(System.IO.Path.GetFileName(s).Length, shortenedLength) + 1;
+                int len = Math.Max(Path.GetFileName(s).Length, shortenedLength) + 1;
                 return s.Substring(0, shortenedLength) + "..." + s.Substring(s.Length - len , len);
             }
             else
