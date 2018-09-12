@@ -79,10 +79,17 @@ namespace FastComments
 
             if(sfd.ShowDialog()==true)
             {
-                // check file path                                              
-                Properties.Settings.Default.DBFilename = Path.GetDirectoryName(sfd.FileName)+"\\"+
-                    Properties.Settings.Default.DefaultDBFileName;
-                Properties.Settings.Default.Save();
+                try
+                {
+                    // check file path                                              
+                    Properties.Settings.Default.DBFilename = Path.GetDirectoryName(sfd.FileName) + "\\" +
+                        Properties.Settings.Default.DefaultDBFileName;
+                    Properties.Settings.Default.Save();
+                }
+                catch(Exception ex) when (ex is ArgumentException || ex is PathTooLongException)
+                {
+                    MessageBox.Show("Tarkista hakemisto");//TODO:
+                }
                 filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen);
             }
         }

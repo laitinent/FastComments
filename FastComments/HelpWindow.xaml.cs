@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace FastComments
 {
@@ -99,19 +100,35 @@ namespace FastComments
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            Item i = (button.DataContext as Item);
-            comms.Insert(comms.IndexOf(i), new Item());
-            EditItemAt(comms.IndexOf(i)-1, false);
-            //MessageBox.Show("Index= " + comms.IndexOf(i));
+            if (sender is Button)
+            {
+                Button button = sender as Button;
+                Item i = (button.DataContext as Item);
+                comms.Insert(comms.IndexOf(i), new Item());
+                EditItemAt(comms.IndexOf(i) - 1, false);
+                //MessageBox.Show("Index= " + comms.IndexOf(i));
+            }
         }
-
+        /// <summary>
+        /// Edit button click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            Item i = (button.DataContext as Item);
-            
-            EditItemAt(comms.IndexOf(i));
+            if (sender is Button)
+            {
+                Button button = sender as Button;
+                Item i = (button.DataContext as Item);
+
+                EditItemAt(comms.IndexOf(i));
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //string sortby = (listView1.View as GridView).Columns[0].Header.ToString();
+            listView1.Items.SortDescriptions.Add(new SortDescription("Key", ListSortDirection.Ascending));
         }
     }
 }

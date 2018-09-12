@@ -79,10 +79,16 @@ namespace FastComments
         {            
             // Insert code to set properties and fields of the object.  
             XmlSerializer mySerializer = new XmlSerializer(typeof(ObservableCollection<Item>));
-            // To write to a file, create a StreamWriter object.  
-            StreamWriter myWriter = new StreamWriter(_filename);
-            mySerializer.Serialize(myWriter, Comments);
-            myWriter.Close();
+
+            StreamWriter myWriter;
+            try
+            {
+                // To write to a file, create a StreamWriter object.  
+                myWriter = new StreamWriter(_filename);
+                mySerializer.Serialize(myWriter, Comments);
+                myWriter.Close();
+            }
+            catch (Exception ex) { MessageBox.Show("Tallennus: "+ex.Message); }
         }
 
         private void Restore(String _filename)
@@ -99,10 +105,11 @@ namespace FastComments
                 // Call the Deserialize method and cast to the object type.  
                 Comments = (ObservableCollection<Item>)mySerializer.Deserialize(myFileStream);
             }
-            catch (FileNotFoundException )
+            catch (FileNotFoundException)
             {
                 Button_Click_1(this, null);
             }
+            catch (Exception ex) { MessageBox.Show("Tietojen lukeminen: "+ex.Message); }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -141,8 +148,12 @@ namespace FastComments
         {
             if (listFulltext.Count > 0)
             {
-                listFulltext.RemoveAt(listFulltext.Count - 1);
-                UpdateTBFromList();
+                try
+                {
+                    listFulltext.RemoveAt(listFulltext.Count - 1);
+                    UpdateTBFromList();
+                }
+                catch (ArgumentOutOfRangeException ex) { MessageBox.Show("Poisto ei onnistunut"); }
             }
         }
 
@@ -166,7 +177,13 @@ namespace FastComments
                     UpdateTBFromList();
 
                     codeTextBox.Text = "";
-                    if (copyCheckbox.IsChecked == true) { Clipboard.SetText(fullTextBox.Text); }
+                    if (copyCheckbox.IsChecked == true) {
+                        try
+                        {
+                            Clipboard.SetText(fullTextBox.Text);
+                        }
+                        catch (ArgumentNullException ex) { /* ei kopioitavaa (argumentnullexception) */}
+                    }
                     break;
                 }
             }
