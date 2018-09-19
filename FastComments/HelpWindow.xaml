@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FastComments"
         xmlns:p="clr-namespace:FastComments.Properties"
         mc:Ignorable="d"
-        Title="{x:Static p:Resources.hw_title}" Height="354.038" Width="414.284" Loaded="Window_Loaded">
+        Title="{x:Static p:Resources.hw_title}" Height="354.038" Width="414.284" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
         <ListView x:Name="listView1" SelectionChanged="listView1_SelectionChanged"  ToolTip="{x:Static p:Resources.hw_tt}" >
             <ListView.Resources>
@@ -22,6 +22,12 @@
                 <DataTemplate x:Key="Insert">
                     <Button Content="{x:Static p:Resources.hw_insert}" Click="Button_Click"/>
                 </DataTemplate>
+                <DataTemplate x:Key="Up">
+                    <Button x:Name="btnUp"  Content="⇑" Click="btnUp_Click"/>
+                </DataTemplate>
+                <DataTemplate x:Key="Down">
+                    <Button x:Name="btnDown" Content="⇓" Click="btnDown_Click"/>
+                </DataTemplate>
 
             </ListView.Resources>
             <ListView.View>
@@ -30,8 +36,10 @@
                     <GridViewColumn Header="{x:Static p:Resources.hw_code}" CellTemplate ="{StaticResource Key}"> <!--DisplayMemberBinding="{Binding Key}"-->                        
                     </GridViewColumn>
                     <GridViewColumn Header="{x:Static p:Resources.hw_text}" CellTemplate ="{StaticResource Comment}"></GridViewColumn>
-                    <GridViewColumn Header="Edit" CellTemplate ="{StaticResource Edit}"></GridViewColumn>
-                    <GridViewColumn Header="Insert" CellTemplate ="{StaticResource Insert}"></GridViewColumn>
+                    <GridViewColumn Header="{x:Static p:Resources.hw_edit}" CellTemplate ="{StaticResource Edit}"></GridViewColumn>
+                    <GridViewColumn Header="{x:Static p:Resources.hw_insert}" CellTemplate ="{StaticResource Insert}"></GridViewColumn>
+                    <GridViewColumn Header="{x:Static p:Resources.hw_up}" CellTemplate ="{StaticResource Up}"></GridViewColumn>
+                    <GridViewColumn Header="{x:Static p:Resources.hw_down}" CellTemplate ="{StaticResource Down}"></GridViewColumn>
                     
                 </GridView>
             </ListView.View>

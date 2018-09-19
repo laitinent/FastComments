@@ -16,7 +16,6 @@ C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastCommen
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastComments.csproj.CoreCompileInputs.cache
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastComments.exe
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastComments.pdb
-C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastComments.csprojAssemblyReference.cache
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\EditListItemWindow.g.cs
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\EditListItemWindow.baml
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\bin\Release\fi-FI\FastComments.resources.dll
@@ -25,3 +24,6 @@ C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastCommen
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastComments.Properties.Resources.en.resources
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\fi-FI\FastComments.resources.dll
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\en\FastComments.resources.dll
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\ReportWindow.g.cs
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\App.baml
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\ReportWindow.baml

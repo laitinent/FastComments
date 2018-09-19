@@ -187,6 +187,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Down.
+        /// </summary>
+        public static string hw_down {
+            get {
+                return ResourceManager.GetString("hw_down", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit....
         /// </summary>
         public static string hw_edit {
@@ -223,11 +232,20 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Click to Edit, Insert to Add Entry above.
+        ///   Looks up a localized string similar to Click to Edit, Insert to Add Entry above, Move.
         /// </summary>
         public static string hw_tt {
             get {
                 return ResourceManager.GetString("hw_tt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Up.
+        /// </summary>
+        public static string hw_up {
+            get {
+                return ResourceManager.GetString("hw_up", resourceCulture);
             }
         }
         
@@ -291,6 +309,15 @@ namespace FastComments.Properties {
         public static string mw_help_tt {
             get {
                 return ResourceManager.GetString("mw_help_tt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to List all codes.
+        /// </summary>
+        public static string mw_report {
+            get {
+                return ResourceManager.GetString("mw_report", resourceCulture);
             }
         }
         

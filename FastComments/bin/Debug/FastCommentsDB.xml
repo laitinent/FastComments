@@ -5,6 +5,10 @@
     <Fulltext>Korjaa Abstraktiasi</Fulltext>
   </Item>
   <Item>
+    <Key>yy</Key>
+    <Fulltext>Why Why</Fulltext>
+  </Item>
+  <Item>
     <Key>ti</Key>
     <Fulltext>Korjaa tiivistelmäsi</Fulltext>
   </Item>
@@ -15,9 +19,5 @@
   <Item>
     <Key>zz</Key>
     <Fulltext>Last comment</Fulltext>
-  </Item>
-  <Item>
-    <Key>yy</Key>
-    <Fulltext>Why Why</Fulltext>
   </Item>
 </ArrayOfItem>

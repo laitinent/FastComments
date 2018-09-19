@@ -25,3 +25,6 @@ C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\fi-FI\FastComments.resources.dll
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\en\FastComments.resources.dll
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\FastComments.csprojAssemblyReference.cache
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\App.baml
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\ReportWindow.g.cs
+C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Debug\ReportWindow.baml

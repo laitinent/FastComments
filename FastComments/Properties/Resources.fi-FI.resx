@@ -159,6 +159,9 @@
   <data name="hw_code" xml:space="preserve">
     <value>Koodi</value>
   </data>
+  <data name="hw_down" xml:space="preserve">
+    <value>Alas</value>
+  </data>
   <data name="hw_edit" xml:space="preserve">
     <value>Muokkaa...</value>
   </data>
@@ -172,7 +175,10 @@
     <value>Ohje</value>
   </data>
   <data name="hw_tt" xml:space="preserve">
-    <value>Editoi valitsemalla rivi, lisää uusi rivi yläpuolelle painikkeella</value>
+    <value>Editoi valitsemalla rivi, lisää uusi rivi yläpuolelle painikkeella, siirrä</value>
+  </data>
+  <data name="hw_up" xml:space="preserve">
+    <value>Ylös</value>
   </data>
   <data name="mb_codeused" xml:space="preserve">
     <value>Koodi on jo käytössä. Valitse toinen koodi.</value>
@@ -194,6 +200,9 @@
   </data>
   <data name="mw_help_tt" xml:space="preserve">
     <value>Näytä käytettävät koodi ja muokkaa niitä</value>
+  </data>
+  <data name="mw_report" xml:space="preserve">
+    <value>Näytä koodit</value>
   </data>
   <data name="mw_settings" xml:space="preserve">
     <value>Asetukset...</value>

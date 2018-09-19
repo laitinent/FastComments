@@ -159,6 +159,9 @@
   <data name="hw_code" xml:space="preserve">
     <value>Code</value>
   </data>
+  <data name="hw_down" xml:space="preserve">
+    <value>Down</value>
+  </data>
   <data name="hw_edit" xml:space="preserve">
     <value>Edit...</value>
   </data>
@@ -172,7 +175,10 @@
     <value>Help</value>
   </data>
   <data name="hw_tt" xml:space="preserve">
-    <value>Click to Edit, Insert to Add Entry above</value>
+    <value>Click to Edit, Insert to Add Entry above, Move</value>
+  </data>
+  <data name="hw_up" xml:space="preserve">
+    <value>Up</value>
   </data>
   <data name="mb_codeused" xml:space="preserve">
     <value>Code already used. Use different code.</value>
@@ -194,6 +200,9 @@
   </data>
   <data name="mw_help_tt" xml:space="preserve">
     <value>Show available codes</value>
+  </data>
+  <data name="mw_report" xml:space="preserve">
+    <value>List all codes</value>
   </data>
   <data name="mw_settings" xml:space="preserve">
     <value>Settings...</value>

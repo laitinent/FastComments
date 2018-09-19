@@ -29,6 +29,7 @@ namespace FastComments
         String filename = "FastCommentsDB.xml";
         ObservableCollection<Item> Comments = new ObservableCollection<Item>(); // code+text from file
         List<string> listFulltext = new List<string>(); // in sync with full text box
+        HelpWindow helpWindow;
 
         public MainWindow()
         {
@@ -68,9 +69,22 @@ namespace FastComments
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            HelpWindow helpWindow = new HelpWindow(ref Comments);
-            helpWindow.listView1.ItemsSource = Comments;
-            helpWindow.Show();
+            if (helpWindow == null)
+            {
+                // use existing window, if already created
+                helpWindow = new HelpWindow(ref Comments);
+                helpWindow.listView1.ItemsSource = Comments;
+            }
+
+            // button toggles Show/Hide
+            if (helpWindow.Visibility != Visibility.Visible)
+            {
+                helpWindow.Show();
+            }
+            else
+            {
+                helpWindow.Hide();
+            }
         }
 
 
@@ -88,7 +102,7 @@ namespace FastComments
                 mySerializer.Serialize(myWriter, Comments);
                 myWriter.Close();
             }
-            catch (Exception ex) { MessageBox.Show("Tallennus: "+ex.Message); }
+            catch (Exception ex) { MessageBox.Show($"Tietojen tallennuksessa ongelmia ({ex.Message})"); }
         }
 
         private void Restore(String _filename)
@@ -109,7 +123,7 @@ namespace FastComments
             {
                 Button_Click_1(this, null);
             }
-            catch (Exception ex) { MessageBox.Show("Tietojen lukeminen: "+ex.Message); }
+            catch (Exception ex) { MessageBox.Show($"Tietojen lukemisessa ongelmia ({ex.Message})"); }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -153,7 +167,7 @@ namespace FastComments
                     listFulltext.RemoveAt(listFulltext.Count - 1);
                     UpdateTBFromList();
                 }
-                catch (ArgumentOutOfRangeException ex) { MessageBox.Show("Poisto ei onnistunut"); }
+                catch (ArgumentOutOfRangeException ) { MessageBox.Show("Poisto ei onnistunut"); }
             }
         }
 
@@ -182,12 +196,18 @@ namespace FastComments
                         {
                             Clipboard.SetText(fullTextBox.Text);
                         }
-                        catch (ArgumentNullException ex) { /* ei kopioitavaa (argumentnullexception) */}
+                        catch (ArgumentNullException ) { /* ei kopioitavaa (argumentnullexception) */}
                     }
                     break;
                 }
             }
             codeTextBox.Focus();
+        }
+
+        // List all codes -button
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            ReportWindow rw = new ReportWindow(Comments);
         }
     }
 }

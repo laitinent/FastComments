@@ -128,7 +128,54 @@ namespace FastComments
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //string sortby = (listView1.View as GridView).Columns[0].Header.ToString();
-            listView1.Items.SortDescriptions.Add(new SortDescription("Key", ListSortDirection.Ascending));
+            // It is possible to autosort
+            //listView1.Items.SortDescriptions.Add(new SortDescription("Key", ListSortDirection.Ascending));
+        }
+
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            // cancel close and use Hide/Show, see MainWindow/Button_Click
+            e.Cancel = true;
+            Hide();
+            // also in App.xaml Shutdown mode is changed from default to close this window on mainwindow close
+        }
+
+        // not used
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// Move up on the list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnUp_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button button = sender as Button;
+                Item i = (button.DataContext as Item);
+                int index = comms.IndexOf(i);
+                if (index > 0) { comms.Move(index, index - 1); }
+            }            
+        }
+        /// <summary>
+        /// Move later on the list and collection
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnDown_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button)
+            {
+                Button button = sender as Button;
+                Item i = (button.DataContext as Item);
+                int index = comms.IndexOf(i);
+                if (index < comms.Count-1) { comms.Move(index, index + 1); }
+            }
         }
     }
 }
