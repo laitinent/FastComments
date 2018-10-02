@@ -213,4 +213,10 @@
   <data name="hw_up" xml:space="preserve">
     <value>Up</value>
   </data>
+  <data name="rw_title" xml:space="preserve">
+    <value>Print all codes</value>
+  </data>
+  <data name="rw_tooltip" xml:space="preserve">
+    <value>You can copy codes as text</value>
+  </data>
 </root>

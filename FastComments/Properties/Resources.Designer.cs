@@ -347,5 +347,23 @@ namespace FastComments.Properties {
                 return ResourceManager.GetString("mw_undo", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print all codes.
+        /// </summary>
+        public static string rw_title {
+            get {
+                return ResourceManager.GetString("rw_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You can copy codes as text.
+        /// </summary>
+        public static string rw_tooltip {
+            get {
+                return ResourceManager.GetString("rw_tooltip", resourceCulture);
+            }
+        }
     }
 }

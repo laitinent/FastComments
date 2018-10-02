@@ -213,4 +213,10 @@
   <data name="mw_undo" xml:space="preserve">
     <value>Peru</value>
   </data>
+  <data name="rw_title" xml:space="preserve">
+    <value>Näytä kaikki koodit</value>
+  </data>
+  <data name="rw_tooltip" xml:space="preserve">
+    <value>Voit kopioida kaikki tekstinä toiseen sovellukseen</value>
+  </data>
 </root>

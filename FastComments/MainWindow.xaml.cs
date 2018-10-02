@@ -208,6 +208,7 @@ namespace FastComments
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             ReportWindow rw = new ReportWindow(Comments);
+            rw.ShowDialog();
         }
     }
 }
