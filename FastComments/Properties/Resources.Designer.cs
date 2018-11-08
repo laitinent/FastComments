@@ -178,6 +178,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Empty code on list. Remove?.
+        /// </summary>
+        public static string hw_cancel {
+            get {
+                return ResourceManager.GetString("hw_cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code.
         /// </summary>
         public static string hw_code {
@@ -277,11 +286,38 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string mw_clear {
+            get {
+                return ResourceManager.GetString("mw_clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear comments.
+        /// </summary>
+        public static string mw_clear_tt {
+            get {
+                return ResourceManager.GetString("mw_clear_tt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code.
         /// </summary>
         public static string mw_code {
             get {
                 return ResourceManager.GetString("mw_code", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter shortened code of comment. See full list in .
+        /// </summary>
+        public static string mw_code_tt {
+            get {
+                return ResourceManager.GetString("mw_code_tt", resourceCulture);
             }
         }
         

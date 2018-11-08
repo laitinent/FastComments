@@ -25,6 +25,10 @@ namespace FastComments
             // "database"
             filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen); 
             filenameTB.ToolTip = Properties.Settings.Default.DBFilename; 
+            if(Path.GetDirectoryName(Properties.Settings.Default.DBFilename).Length==0)
+            {
+                filenameTB.ToolTip = $"{Directory.GetCurrentDirectory()}\\{Properties.Settings.Default.DBFilename}";
+            }
         }
 
         /// <summary>
@@ -68,6 +72,10 @@ namespace FastComments
         private void btFilename_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
+            if (Path.GetDirectoryName(Properties.Settings.Default.DBFilename).Length == 0)
+            {
+                sfd.InitialDirectory = Directory.GetCurrentDirectory();
+            }
             sfd.FileName = //Properties.Settings.Default.DBFilename;
                 sfd.Title = Properties.Resources.acw_selectfolder;
             //sfd.Filter = "XML Database files |*.xml";

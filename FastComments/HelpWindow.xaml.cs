@@ -65,8 +65,10 @@ namespace FastComments
         /// <param name="bUseWarning">Warn if Key is already in list</param>
         private void EditItemAt(int index, bool bUseWarning=true)
         {
-            Title = myTitle + " " + comms[index].Key + " " + comms[index].Fulltext;
             Item item = comms[index];
+            //Title = myTitle + " " + comms[index].Key + " " + comms[index].Fulltext;
+            Title = $"{myTitle} {item.Key} {item.Fulltext}";
+            
             EditListItemWindow ew = new EditListItemWindow(ref item);
             ew.keyTB.Text = item.Key;
             ew.textTB.Text = item.Fulltext;
@@ -135,6 +137,16 @@ namespace FastComments
 
         private void Window_Closing(object sender, CancelEventArgs e)
         {
+            foreach(Item item in comms)
+            {
+                if(item.Fulltext.Length==0 && item.Key.Length>0)
+                {
+                    if(MessageBox.Show(Properties.Resources.hw_cancel,"Info",MessageBoxButton.YesNo)== MessageBoxResult.Yes)
+                    {
+                        comms.Remove(item);
+                    }
+                }
+            }
             // cancel close and use Hide/Show, see MainWindow/Button_Click
             e.Cancel = true;
             Hide();

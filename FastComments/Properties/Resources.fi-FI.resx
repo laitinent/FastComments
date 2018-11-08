@@ -156,6 +156,9 @@
   <data name="ecw_title" xml:space="preserve">
     <value>Muokkaa kommenttia</value>
   </data>
+  <data name="hw_cancel" xml:space="preserve">
+    <value>Listalle jäi tyhjä koodi. Poistetaanko?</value>
+  </data>
   <data name="hw_code" xml:space="preserve">
     <value>Koodi</value>
   </data>
@@ -189,8 +192,17 @@
   <data name="mw_autocopy_tt" xml:space="preserve">
     <value>Kopioi kommenttiruudun sisältö Leikepöydälle</value>
   </data>
+  <data name="mw_clear" xml:space="preserve">
+    <value>Tyhjennä</value>
+  </data>
+  <data name="mw_clear_tt" xml:space="preserve">
+    <value>Tyhjennä kommentit</value>
+  </data>
   <data name="mw_code" xml:space="preserve">
     <value>Koodi</value>
+  </data>
+  <data name="mw_code_tt" xml:space="preserve">
+    <value>Syötä kommentin lyhennekoodi. Näet listan painikkeista </value>
   </data>
   <data name="mw_enter" xml:space="preserve">
     <value>Enter</value>

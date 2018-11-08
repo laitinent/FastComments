@@ -219,4 +219,16 @@
   <data name="rw_tooltip" xml:space="preserve">
     <value>You can copy codes as text</value>
   </data>
+  <data name="hw_cancel" xml:space="preserve">
+    <value>Empty code on list. Remove?</value>
+  </data>
+  <data name="mw_clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="mw_clear_tt" xml:space="preserve">
+    <value>Clear comments</value>
+  </data>
+  <data name="mw_code_tt" xml:space="preserve">
+    <value>Enter shortened code of comment. See full list in </value>
+  </data>
 </root>

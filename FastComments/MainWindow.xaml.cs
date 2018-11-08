@@ -37,7 +37,7 @@ namespace FastComments
             //System.Threading.Thread.CurrentThread.CurrentUICulture =  new System.Globalization.CultureInfo("fi-FI");
             InitializeComponent();
             tbVersion.Text = "v. "+System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-
+            codeTextBox.ToolTip = $"{Properties.Resources.mw_code_tt} {Properties.Resources.mw_help} & {Properties.Resources.mw_report}"; 
         }
 
         /// <summary>
@@ -46,8 +46,11 @@ namespace FastComments
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {            
-
+        {
+            if (codeTextBox.Text.Length > 0)
+            {
+                btEnter.IsEnabled = true;
+            }
         }
 
         /// <summary>
@@ -166,6 +169,7 @@ namespace FastComments
                 {
                     listFulltext.RemoveAt(listFulltext.Count - 1);
                     UpdateTBFromList();
+                    if (listFulltext.Count == 0) btClear.IsEnabled = false;
                 }
                 catch (ArgumentOutOfRangeException ) { MessageBox.Show("Poisto ei onnistunut"); }
             }
@@ -179,7 +183,7 @@ namespace FastComments
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
-            String fullText;
+            string fullText;
             // check if Code can be found
             foreach (var item in Comments)
             {
@@ -189,8 +193,12 @@ namespace FastComments
                     listFulltext.Add(fullText);
 
                     UpdateTBFromList();
+                    btUndo.IsEnabled = true;
+                    btClear.IsEnabled = true;
 
                     codeTextBox.Text = "";
+                    btEnter.IsEnabled = false;
+
                     if (copyCheckbox.IsChecked == true) {
                         try
                         {
@@ -209,6 +217,18 @@ namespace FastComments
         {
             ReportWindow rw = new ReportWindow(Comments);
             rw.ShowDialog();
+        }
+
+        // Clear button
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            listFulltext.Clear();
+            UpdateTBFromList();
+        }
+
+        private void fullTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (fullTextBox.Text.Length == 0) btClear.IsEnabled = false;
         }
     }
 }
