@@ -26,7 +26,7 @@ namespace FastComments
     /// </summary>
     public partial class MainWindow : Window
     {
-        String filename = "FastCommentsDB.xml";
+        string filename_wo_path = "FastCommentsDB.xml";
         ObservableCollection<Item> Comments = new ObservableCollection<Item>(); // code+text from file
         List<string> listFulltext = new List<string>(); // in sync with full text box
         HelpWindow helpWindow;
@@ -92,7 +92,7 @@ namespace FastComments
 
 
         //---Save & Restore on Window close/load----//
-        private void Save(String _filename)
+        private void Save(string _filename)
         {            
             // Insert code to set properties and fields of the object.  
             XmlSerializer mySerializer = new XmlSerializer(typeof(ObservableCollection<Item>));
@@ -108,7 +108,7 @@ namespace FastComments
             catch (Exception ex) { MessageBox.Show($"Tietojen tallennuksessa ongelmia ({ex.Message})"); }
         }
 
-        private void Restore(String _filename)
+        private void Restore(string _filename)
         {
             
             // Construct an instance of the XmlSerializer with the type  
@@ -131,14 +131,24 @@ namespace FastComments
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Save(filename);
-            Properties.Settings.Default.DBFilename = filename;
-            Properties.Settings.Default.Save();
+            if (System.IO.Path.GetDirectoryName(Properties.Settings.Default.DBFilename).Length==0)
+            {
+                AddCommentsWindow.GetDBDirectory();
+            }
+            if (Comments.Count == 0)
+            {
+                if (MessageBox.Show(Properties.Resources.mw_save, "Info", MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    Save(Properties.Settings.Default.DBFilename);
+                }
+            }
+            //Properties.Settings.Default.DBFilename = filename;
+            //Properties.Settings.Default.Save();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            filename = Properties.Settings.Default.DBFilename;
+            var filename = Properties.Settings.Default.DBFilename;
             Restore(filename);
         }
         // --------//
@@ -153,7 +163,8 @@ namespace FastComments
         {
             AddCommentsWindow addWindow = new AddCommentsWindow(ref Comments);            
             addWindow.ShowDialog();// may modify filename
-            filename = Properties.Settings.Default.DBFilename;
+                                   //filename =Properties.Settings.Default.DBFilename
+            Restore(Properties.Settings.Default.DBFilename);
         }
 
         /// <summary>

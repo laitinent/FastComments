@@ -231,4 +231,7 @@
   <data name="mw_code_tt" xml:space="preserve">
     <value>Enter shortened code of comment. See full list in </value>
   </data>
+  <data name="mw_save" xml:space="preserve">
+    <value>Are you sure you want to save empty code database?</value>
+  </data>
 </root>

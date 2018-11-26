@@ -358,6 +358,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to save empty code database?.
+        /// </summary>
+        public static string mw_save {
+            get {
+                return ResourceManager.GetString("mw_save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings....
         /// </summary>
         public static string mw_settings {

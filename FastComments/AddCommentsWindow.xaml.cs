@@ -71,6 +71,16 @@ namespace FastComments
         /// <param name="e"></param>
         private void btFilename_Click(object sender, RoutedEventArgs e)
         {
+            GetDBDirectory();
+            filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen);
+            filenameTB.ToolTip = Properties.Settings.Default.DBFilename;
+        }
+
+        /// <summary>
+        /// Ask directory and save in properties/settings
+        /// </summary>
+        internal static void GetDBDirectory()
+        {
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
             if (Path.GetDirectoryName(Properties.Settings.Default.DBFilename).Length == 0)
             {
@@ -85,7 +95,7 @@ namespace FastComments
             sfd.ValidateNames = false;
             sfd.Title = Properties.Resources.acw_selectfolder;
 
-            if(sfd.ShowDialog()==true)
+            if (sfd.ShowDialog() == true)
             {
                 try
                 {
@@ -94,22 +104,22 @@ namespace FastComments
                         Properties.Settings.Default.DefaultDBFileName;
                     Properties.Settings.Default.Save();
                 }
-                catch(Exception ex) when (ex is ArgumentException || ex is PathTooLongException)
+                catch (Exception ex) when (ex is ArgumentException || ex is PathTooLongException)
                 {
                     MessageBox.Show("Tarkista hakemisto");//TODO:
                 }
-                filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen);
-            }
+              }
         }
+
         /* moved to Item.cs
-        internal bool myContains(Item item)
-        {
-            foreach(Item i in items)
-            {
-                if (i.CompareTo(item) == 0) return true;
-            }
-            return false;
-        }*/
+internal bool myContains(Item item)
+{
+   foreach(Item i in items)
+   {
+       if (i.CompareTo(item) == 0) return true;
+   }
+   return false;
+}*/
 
         /// <summary>
         /// Typically for file path shortened view

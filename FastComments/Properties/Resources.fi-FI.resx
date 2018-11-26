@@ -216,6 +216,9 @@
   <data name="mw_report" xml:space="preserve">
     <value>Näytä koodit</value>
   </data>
+  <data name="mw_save" xml:space="preserve">
+    <value>Haluatko varmasti tallentaa tyhjän kooditietokannan?</value>
+  </data>
   <data name="mw_settings" xml:space="preserve">
     <value>Asetukset...</value>
   </data>
