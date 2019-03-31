@@ -234,4 +234,13 @@
   <data name="mw_save" xml:space="preserve">
     <value>Are you sure you want to save empty code database?</value>
   </data>
+  <data name="mw_fulltext_tt" xml:space="preserve">
+    <value>You can also insert comments manually</value>
+  </data>
+  <data name="acw_checkdir" xml:space="preserve">
+    <value>Check directory path</value>
+  </data>
+  <data name="mw_undoall" xml:space="preserve">
+    <value>Undo All</value>
+  </data>
 </root>

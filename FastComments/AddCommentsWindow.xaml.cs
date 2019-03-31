@@ -29,6 +29,7 @@ namespace FastComments
             {
                 filenameTB.ToolTip = $"{Directory.GetCurrentDirectory()}\\{Properties.Settings.Default.DBFilename}";
             }
+            
         }
 
         /// <summary>
@@ -60,7 +61,7 @@ namespace FastComments
         /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            DialogResult = true;
+            //DialogResult = true;
             Close();
         }
 
@@ -71,16 +72,18 @@ namespace FastComments
         /// <param name="e"></param>
         private void btFilename_Click(object sender, RoutedEventArgs e)
         {
-            GetDBDirectory();
+            GetDBDirectory(this);
             filenameTB.Text = shortenFilePath(Properties.Settings.Default.DBFilename, filenameMaxLen);
             filenameTB.ToolTip = Properties.Settings.Default.DBFilename;
         }
 
         /// <summary>
         /// Ask directory and save in properties/settings
+        /// <param name="w">Window</param>
         /// </summary>
-        internal static void GetDBDirectory()
+        internal static void GetDBDirectory(Window w)
         {
+            // called also from MainWindow
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
             if (Path.GetDirectoryName(Properties.Settings.Default.DBFilename).Length == 0)
             {
@@ -103,6 +106,10 @@ namespace FastComments
                     Properties.Settings.Default.DBFilename = Path.GetDirectoryName(sfd.FileName) + "\\" +
                         Properties.Settings.Default.DefaultDBFileName;
                     Properties.Settings.Default.Save();
+                    if (w is AddCommentsWindow) // hack to enable static func to b called from this window
+                    {
+                        w.DialogResult = true;
+                    }
                 }
                 catch (Exception ex) when (ex is ArgumentException || ex is PathTooLongException)
                 {

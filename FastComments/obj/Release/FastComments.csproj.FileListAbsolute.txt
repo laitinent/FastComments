@@ -27,4 +27,3 @@ C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\en\FastCom
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\ReportWindow.g.cs
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\App.baml
 C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\ReportWindow.baml
-C:\Users\tlaitinen\source\repos\FastComments\FastComments\obj\Release\FastComments.csprojAssemblyReference.cache

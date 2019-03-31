@@ -123,6 +123,9 @@
   <data name="acw_browse" xml:space="preserve">
     <value>Browse...</value>
   </data>
+  <data name="acw_checkdir" xml:space="preserve">
+    <value>Check directory path</value>
+  </data>
   <data name="acw_done" xml:space="preserve">
     <value>Done</value>
   </data>
@@ -207,6 +210,9 @@
   <data name="mw_enter" xml:space="preserve">
     <value>Enter</value>
   </data>
+  <data name="mw_fulltext_tt" xml:space="preserve">
+    <value>You can also insert comments manually</value>
+  </data>
   <data name="mw_help" xml:space="preserve">
     <value>Help...</value>
   </data>
@@ -227,6 +233,9 @@
   </data>
   <data name="mw_undo" xml:space="preserve">
     <value>Undo</value>
+  </data>
+  <data name="mw_undoall" xml:space="preserve">
+    <value>Undo all</value>
   </data>
   <data name="rw_title" xml:space="preserve">
     <value>Print all codes</value>

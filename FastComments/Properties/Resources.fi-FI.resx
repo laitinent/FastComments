@@ -123,6 +123,9 @@
   <data name="acw_browse" xml:space="preserve">
     <value>Selaa...</value>
   </data>
+  <data name="acw_checkdir" xml:space="preserve">
+    <value>Tarkista hakemisto</value>
+  </data>
   <data name="acw_done" xml:space="preserve">
     <value>Valmis</value>
   </data>
@@ -207,6 +210,9 @@
   <data name="mw_enter" xml:space="preserve">
     <value>Enter</value>
   </data>
+  <data name="mw_fulltext_tt" xml:space="preserve">
+    <value>Voit myös lisätä kommentteja tähän</value>
+  </data>
   <data name="mw_help" xml:space="preserve">
     <value>Ohje...</value>
   </data>
@@ -227,6 +233,9 @@
   </data>
   <data name="mw_undo" xml:space="preserve">
     <value>Peru</value>
+  </data>
+  <data name="mw_undoall" xml:space="preserve">
+    <value>Peru kaikki</value>
   </data>
   <data name="rw_title" xml:space="preserve">
     <value>Näytä kaikki koodit</value>

@@ -7,11 +7,33 @@
         xmlns:p="clr-namespace:FastComments.Properties"
         mc:Ignorable="d"
         Title="FastComments" Height="466" Width="673" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Storyboard x:Key="FlashFieldAnimation" RepeatBehavior="3x" >
+            <ColorAnimation Storyboard.TargetProperty="Background.Color"
+                From="White" To="Red" 
+                Duration="0:0:0.2" BeginTime="0:0:0" />
+            <ColorAnimation Storyboard.TargetProperty="Background.Color"
+                From="Red" To="White"
+                Duration="0:0:0.2" BeginTime="0:0:0.2" />
+        </Storyboard>
+    </Window.Resources>
     <Grid>
-        <TextBox x:Name="fullTextBox" HorizontalAlignment="Left" Height="415" Margin="192,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="463" TextChanged="fullTextBox_TextChanged"/>
+        <TextBox x:Name="fullTextBox" HorizontalAlignment="Left" Height="415" Margin="192,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="463" TextChanged="fullTextBox_TextChanged" AcceptsReturn="True" ToolTip="{x:Static p:Resources.mw_fulltext_tt}" KeyUp="FullTextBox_KeyUp"/>
 
         <Label Content="{x:Static p:Resources.mw_code}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="27" Width="50"/>
-        <TextBox x:Name="codeTextBox" HorizontalAlignment="Left" Height="44" Margin="10,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" FontSize="20" TextChanged="TextBox_TextChanged"/>
+        <TextBox x:Name="codeTextBox" HorizontalAlignment="Left" Height="44" Margin="10,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" FontSize="20" TextChanged="TextBox_TextChanged">
+            <TextBox.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger  Binding="{Binding txtPassword_Flash}" Value="True" >
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FlashFieldAnimation}" />
+                            </DataTrigger.EnterActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
         <Button x:Name="btUndo" Content="{x:Static p:Resources.mw_undo}" HorizontalAlignment="Left" Margin="100,83,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_2" IsEnabled="False"/>
         <Button Content="{x:Static p:Resources.mw_help}" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="20" ToolTip="{x:Static p:Resources.mw_help_tt}"/>
         <CheckBox x:Name="copyCheckbox" Content="{x:Static p:Resources.mw_autocopy}" HorizontalAlignment="Left" Margin="10,85,0,0" VerticalAlignment="Top" IsChecked="True" ToolTip="{x:Static p:Resources.mw_autocopy_tt}"/>

@@ -79,6 +79,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Check directory path.
+        /// </summary>
+        public static string acw_checkdir {
+            get {
+                return ResourceManager.GetString("acw_checkdir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Done.
         /// </summary>
         public static string acw_done {
@@ -331,6 +340,15 @@ namespace FastComments.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You can also insert comments manually.
+        /// </summary>
+        public static string mw_fulltext_tt {
+            get {
+                return ResourceManager.GetString("mw_fulltext_tt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help....
         /// </summary>
         public static string mw_help {
@@ -390,6 +408,15 @@ namespace FastComments.Properties {
         public static string mw_undo {
             get {
                 return ResourceManager.GetString("mw_undo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undo All.
+        /// </summary>
+        public static string mw_undoall {
+            get {
+                return ResourceManager.GetString("mw_undoall", resourceCulture);
             }
         }
         
